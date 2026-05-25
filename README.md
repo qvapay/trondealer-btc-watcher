@@ -380,7 +380,7 @@ curl -X POST http://localhost:4000/watch \
 
 This watcher is part of the broader QvaPay infrastructure:
 
-- [QvaPay](https://qvapay.com) — P2P fintech platform serving 140K+ users across the Cuban diaspora and LATAM
+- [QvaPay](https://www.qvapay.com) — P2P fintech platform serving 150K+ users across the Cuban diaspora and LATAM
 - TronDealer — Multi-chain USDT/USDC payment gateway (TRON, BSC, Polygon, Ethereum)
 - BitRemesas — US-to-LATAM remittances via stablecoin rails
 
@@ -399,6 +399,6 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built in Des Plaines, IL by [@erichgcruz](https://x.com/erichgcruz) for the QvaPay community.
+Built in Des Plaines, IL by [@erichgcruz](https://x.com/erichgarciacruz) for the QvaPay community.
 
 Lightning Address: `erich@qvapay.com` (coming soon — being built right now).
