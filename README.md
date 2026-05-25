@@ -399,6 +399,6 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built in Des Plaines, IL by [@erichgcruz](https://x.com/erichgarciacruz) for the QvaPay community.
+Built in Des Plaines, IL by [@erichgarciacruz](https://x.com/erichgarciacruz) for the QvaPay community.
 
 Lightning Address: `erich@qvapay.com` (coming soon — being built right now).
