@@ -10,6 +10,7 @@ export interface WatchedAddress {
   // Estado interno
   detected_txid?: string;
   detected_at?: number;
+  detected_amount_sats?: number;
   confirmations?: number;
 }
 

@@ -349,6 +349,7 @@ The consumer is responsible for:
 - Comparing `amount_sats` against expected payment
 - Deciding at how many confirmations to consider a payment settled
 - De-duplicating events (mempool + confirmations for the same `watch_id` can each fire multiple times in rare reorg scenarios)
+- Handling a `confirmation` whose count went **down**: confirmations are measured on the active chain, so if a reorg orphans the payment's block the watcher sends `confirmations: 0` (and counts up again if the payment is re-mined). A payment is only reported `confirmed` once its block is 6 deep on the chain bitcoind currently follows
 
 ## Testing
 
@@ -370,7 +371,7 @@ curl -X POST http://localhost:4000/watch \
 - [ ] Persistent store option (Redis or PostgreSQL) for stateful restart
 - [ ] WebSocket interface for real-time event streaming in addition to webhooks
 - [ ] Multi-output transaction support (currently fires one event per matching output)
-- [ ] Reorg handling — currently does not roll back confirmation events
+- [ ] Deep reorg handling — confirmations follow the active chain over the last 24 blocks, but a watch already `confirmed` is not re-checked
 - [ ] Bulk register/unregister endpoint
 - [ ] Prometheus `/metrics` endpoint
 - [ ] Address derivation: register an xpub and watch all derived addresses
